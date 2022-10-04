@@ -26,7 +26,7 @@ class TweetsAdapter(val tweets: ArrayList<Tweet>) : RecyclerView.Adapter<TweetsA
         holder.tvUserName.text = tweet.user?.name
         holder.tvTweetBody.text = tweet.body
 
-        Glide.with(holder.itemView).load(tweet.user?.publicImageUrl)
+        Glide.with(holder.itemView).load(tweet.user?.publicImageUrl).into(holder.ivProfileImage)
 
     }
 
